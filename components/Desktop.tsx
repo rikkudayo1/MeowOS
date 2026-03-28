@@ -1,8 +1,13 @@
+import Nav from "./desktop/nav"
+import Footerbar from "./desktop/footerbar"
+import { DotPattern } from "./ui/dot-pattern"
 
 const Desktop = () => {
   return (
     <div className="w-screen h-screen">
-        <h1>HELLOWORLD</h1>
+        <Nav />
+        <DotPattern />
+        <Footerbar />
     </div>
   )
 }
