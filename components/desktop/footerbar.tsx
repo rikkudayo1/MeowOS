@@ -2,14 +2,13 @@ import { MacOSDock } from "../ui/mac-os-dock"
 import { useState, useEffect } from "react"
 
 import { demoApps } from "@/data/AppData"
+import { useApp } from "@/store/useApp"
 
 const Footerbar = () => {
   const [mounted, setMounted] = useState(false)
-  const [openApps, setOpenApps] = useState<string[]>([])
 
-  const handleAppClick = (appId: string) => {
-    setOpenApps(prev => (prev.includes(appId) ? prev.filter(id => id !== appId) : [...prev, appId]))
-  }
+  const openApps = useApp((state) => state.openApps)
+  const toggleApp = useApp((state) => state.toggleApp)
 
   useEffect(() => {
     setMounted(true)
@@ -21,7 +20,7 @@ const Footerbar = () => {
 
   return (
     <div className="fixed flex items-center justify-center bottom-10 left-[10vw] right-[10vw] h-[8vh] bg-transparent">
-        <MacOSDock apps={demoApps} onAppClick={handleAppClick} openApps={openApps} />
+        <MacOSDock apps={demoApps} onAppClick={toggleApp} openApps={openApps} />
     </div>
   )
 }

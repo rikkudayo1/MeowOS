@@ -1,12 +1,14 @@
 import Nav from "./desktop/nav"
 import Footerbar from "./desktop/footerbar"
-import { DotPattern } from "./ui/dot-pattern"
+import AppRenderer from "./systems/AppRenderer"
+import { Particles } from "./ui/particles"
 
 const Desktop = () => {
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen overflow-hidden">
         <Nav />
-        <DotPattern />
+        <Particles />
+        <AppRenderer />
         <Footerbar />
     </div>
   )
