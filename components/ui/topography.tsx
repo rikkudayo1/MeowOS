@@ -130,7 +130,7 @@ export function TopographyBackground({
   return (
     <div
       ref={containerRef}
-      className={cn("fixed inset-0 overflow-hidden", className)}
+      className={cn("absolute inset-0 overflow-hidden", className)}
       style={{ backgroundColor }}
     >
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />

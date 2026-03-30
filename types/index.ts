@@ -5,8 +5,10 @@ export type OSState = {
 }
 
 export interface AppState {
-    openApps: string[],
+    openApps: string[]
+    focusOrder: string[]
     toggleApp: (appId: string) => void
     openApp: (appId: string) => void
     closeApp: (appId: string) => void
+    focusApp: (appId: string) => void
 }

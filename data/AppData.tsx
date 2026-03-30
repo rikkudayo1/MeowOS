@@ -7,8 +7,8 @@ export const demoApps: DockApp[] = [
         icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Settings_%28iOS%29.png/250px-Settings_%28iOS%29.png",
     },
     {
-        id: "finder",
-        name: "Finder",
+        id: "profile",
+        name: "Profile",
         icon: "https://cdn.jim-nielsen.com/macos/1024/finder-2021-09-10.png?rf=1024",
     },
     {

@@ -10,7 +10,7 @@ const AppRenderer = () => {
   const openApp = useApp((s) => s.openApp)
 
   return (
-    <div className="h-[95vh] relative" id="bound">
+    <div className="h-[87vh] relative" id="bound">
         <AnimatePresence>
             {openApps.map((appId, index) => {
                 const app = demoApps.find((a) => a.id === appId)

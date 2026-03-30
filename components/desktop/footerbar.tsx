@@ -19,7 +19,7 @@ const Footerbar = () => {
   }
 
   return (
-    <div className="fixed flex items-center justify-center bottom-10 left-[10vw] right-[10vw] h-[8vh] bg-transparent">
+    <div className="fixed flex items-center justify-center bottom-5 left-[10vw] right-[10vw] h-[8vh] bg-transparent z-10">
         <MacOSDock apps={demoApps} onAppClick={toggleApp} openApps={openApps} />
     </div>
   )
