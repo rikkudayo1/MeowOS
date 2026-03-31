@@ -27,6 +27,17 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preload" href="/images/catgif.gif" as="image" />
+        <link rel="preload" href="/images/cat2.gif" as="image" />
+        <link rel="preload" href="/images/cat3.gif" as="image" />
+        <link rel="preload" href="/images/cat4.gif" as="image" />
+        <link rel="preload" href="/images/OSLogo.png" as="image" />
+        <link rel="preload" href="/images/icons/calculator.png" as="image" />
+        <link rel="preload" href="/images/icons/calendar.png" as="image" />
+        <link rel="preload" href="/images/icons/port.png" as="image" />
+        <link rel="preload" href="/images/icons/settings.png" as="image" />
+      </head>
       <body className="min-h-full flex flex-col dark">{children}</body>
     </html>
   );

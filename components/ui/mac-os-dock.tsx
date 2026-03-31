@@ -33,34 +33,34 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
 
   const getResponsiveConfig = useCallback(() => {
     if (typeof window === "undefined") {
-      return { baseIconSize: 64, maxScale: 1.6, effectWidth: 240 }
+      return { baseIconSize: 65, maxScale: 1.8, effectWidth: 270 }
     }
 
     const smallerDimension = Math.min(window.innerWidth, window.innerHeight)
 
     if (smallerDimension < 480) {
       return {
-        baseIconSize: Math.max(40, smallerDimension * 0.08),
+        baseIconSize: Math.max(40, smallerDimension * 0.10),
         maxScale: 1.4,
         effectWidth: smallerDimension * 0.4,
       }
     }
     if (smallerDimension < 768) {
       return {
-        baseIconSize: Math.max(48, smallerDimension * 0.07),
+        baseIconSize: Math.max(48, smallerDimension * 0.09),
         maxScale: 1.5,
         effectWidth: smallerDimension * 0.35,
       }
     }
     if (smallerDimension < 1024) {
       return {
-        baseIconSize: Math.max(56, smallerDimension * 0.06),
+        baseIconSize: Math.max(56, smallerDimension * 0.08),
         maxScale: 1.6,
         effectWidth: smallerDimension * 0.3,
       }
     }
     return {
-      baseIconSize: Math.max(64, Math.min(80, smallerDimension * 0.05)),
+      baseIconSize: Math.max(64, Math.min(80, smallerDimension * 0.07)),
       maxScale: 1.8,
       effectWidth: 300,
     }
@@ -294,16 +294,27 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
               }}
               title={app.name}
             >
-              <img
-                alt={app.name}
-                className="object-contain"
-                height={scaledSize}
-                src={app.icon}
+              <div
                 style={{
-                  filter: `drop-shadow(0 ${scale > 1.2 ? Math.max(2, baseIconSize * 0.05) : Math.max(1, baseIconSize * 0.03)}px ${scale > 1.2 ? Math.max(4, baseIconSize * 0.1) : Math.max(2, baseIconSize * 0.06)}px rgba(0,0,0,${0.2 + (scale - 1) * 0.15}))`,
+                  width: `${scaledSize}px`,
+                  height: `${scaledSize}px`,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: 0,
                 }}
-                width={scaledSize}
-              />
+              >
+                <img
+                  alt={app.name}
+                  src={app.icon}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    filter: `drop-shadow(0 ${scale > 1.2 ? Math.max(2, baseIconSize * 0.05) : Math.max(1, baseIconSize * 0.03)}px ${scale > 1.2 ? Math.max(4, baseIconSize * 0.1) : Math.max(2, baseIconSize * 0.06)}px rgba(0,0,0,${0.2 + (scale - 1) * 0.15}))`,
+                  }}
+                />
+              </div>
 
               {openApps.includes(app.id) && (
                 <div

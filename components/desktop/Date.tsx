@@ -19,7 +19,9 @@ const DateTime = () => {
         return () => clearInterval(interval)
     }, [])
   return (
-    <div>{currentDateTime}</div>
+    <div>
+        <h1 className="text-shadow-md text-shadow-accent">{currentDateTime}</h1>
+    </div>
   )
 }
 

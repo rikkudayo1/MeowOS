@@ -30,7 +30,7 @@ const LockScreen = () => {
 
   return (
     <motion.div 
-      className="absolute w-screen h-screen flex justify-center items-center z-50 backdrop-blur-2xl"
+      className="absolute w-screen h-screen flex justify-center items-center z-100 backdrop-blur-2xl"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: .5, ease: easeInOut }}

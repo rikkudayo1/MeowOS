@@ -1,13 +1,13 @@
 import Nav from "./desktop/nav"
 import Footerbar from "./desktop/footerbar"
 import AppRenderer from "./systems/AppRenderer"
-import { Particles } from "./ui/particles"
+import { useApp } from "@/store/useApp"
 
 const Desktop = () => {
+  const currentBackground = useApp((s) => s.currentBackground)
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div className="w-screen h-screen overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(images/${currentBackground})` }}>
         <Nav />
-        <Particles />
         <AppRenderer />
         <Footerbar />
     </div>

@@ -4,17 +4,17 @@ export const demoApps: DockApp[] = [
     {
         id: "setting",
         name: "Settings",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Settings_%28iOS%29.png/250px-Settings_%28iOS%29.png",
+        icon: "/images/icons/settings.png",
     },
     {
-        id: "profile",
-        name: "Profile",
-        icon: "https://cdn.jim-nielsen.com/macos/1024/finder-2021-09-10.png?rf=1024",
+        id: "portfolio",
+        name: "Portfolio",
+        icon: "/images/icons/port.png",
     },
     {
         id: "calculator",
         name: "Calculator",
-        icon: "https://cdn.jim-nielsen.com/macos/1024/calculator-2021-04-29.png?rf=1024",
+        icon: "/images/icons/calculator.png",
     },
     {
         id: "terminal",
@@ -32,16 +32,6 @@ export const demoApps: DockApp[] = [
         icon: "https://cdn.jim-nielsen.com/macos/1024/notes-2021-05-25.png?rf=1024",
     },
     {
-        id: "safari",
-        name: "Safari",
-        icon: "https://cdn.jim-nielsen.com/macos/1024/safari-2021-06-02.png?rf=1024",
-    },
-    {
-        id: "photos",
-        name: "Photos",
-        icon: "https://cdn.jim-nielsen.com/macos/1024/photos-2021-05-28.png?rf=1024",
-    },
-    {
         id: "music",
         name: "Music",
         icon: "https://cdn.jim-nielsen.com/macos/1024/music-2021-05-25.png?rf=1024",
@@ -49,6 +39,6 @@ export const demoApps: DockApp[] = [
     {
         id: "calendar",
         name: "Calendar",
-        icon: "https://cdn.jim-nielsen.com/macos/1024/calendar-2021-04-29.png?rf=1024",
+        icon: "/images/icons/calendar.png",
     },
   ]
