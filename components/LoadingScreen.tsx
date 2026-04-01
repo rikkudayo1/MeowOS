@@ -5,7 +5,7 @@ import { TopographyBackground } from "./ui/topography"
 const LoadingScreen = () => {
   return (
     <motion.div
-      className="fixed inset-0 bg-black z-[100] flex justify-center items-center"
+      className="fixed inset-0 bg-black z-[150] flex justify-center items-center"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: .5, ease: "easeInOut" }}

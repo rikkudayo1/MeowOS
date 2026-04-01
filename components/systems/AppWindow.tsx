@@ -5,6 +5,8 @@ import { DockApp } from "@/components/ui/mac-os-dock"
 
 import Profile from "../applications/profile"
 import Settings from "../applications/Settings"
+import CalendarApp from "../applications/Calendar"
+import Calculator from "../applications/Calculator"
 
 import { motion } from "framer-motion"
 
@@ -105,10 +107,12 @@ const AppWindow = ({ app, index }: { app: DockApp; index: number }) => {
               </div>
             </div>
             <div className="w-full h-full overflow-hidden">
-              <div className="w-full h-full overflow-y-auto" style={{ scrollbarWidth: "none" }}>
+              <div className="w-full overflow-y-auto" style={{ height: "calc(100% - 36px)", scrollbarWidth: "none" }}>
                 {
                   app.name === "Portfolio" ? <Profile /> :
-                  app.name === "Settings" ? <Settings />
+                  app.name === "Settings" ? <Settings /> :
+                  app.name === "Calendar" ? <CalendarApp /> :
+                  app.name === "Calculator" ? <Calculator />
                   : <h1>Invalid app</h1>
                 }
               </div>
