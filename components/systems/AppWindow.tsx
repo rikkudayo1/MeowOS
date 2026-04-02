@@ -7,6 +7,7 @@ import Profile from "../applications/profile"
 import Settings from "../applications/Settings"
 import CalendarApp from "../applications/Calendar"
 import Calculator from "../applications/Calculator"
+import Music from "../applications/Music"
 
 import { motion } from "framer-motion"
 
@@ -73,7 +74,7 @@ const AppWindow = ({ app, index }: { app: DockApp; index: number }) => {
         bounds="#bound"
         minWidth={400}
         minHeight={300}
-        onDragStart={() => setIsDragging(true)}
+        onDragStart={(e) => setIsDragging(true)}
         onDragStop={(e, d) => {
             setIsDragging(false)
             setPosition({ x: d.x, y: d.y })
@@ -112,7 +113,8 @@ const AppWindow = ({ app, index }: { app: DockApp; index: number }) => {
                   app.name === "Portfolio" ? <Profile /> :
                   app.name === "Settings" ? <Settings /> :
                   app.name === "Calendar" ? <CalendarApp /> :
-                  app.name === "Calculator" ? <Calculator />
+                  app.name === "Calculator" ? <Calculator /> :
+                  app.name === "Music" ? <Music />
                   : <h1>Invalid app</h1>
                 }
               </div>
